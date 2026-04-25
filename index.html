@@ -704,9 +704,9 @@ function renderLife(){
           <input class="life-cat-edit" style="color:${r.tc};background:${r.color};" value="${r.label}" onblur="lifeData[${i}].label=this.value;saveLife();" onclick="event.stopPropagation();">
         </span>
       </td>
-      <td><textarea class="life-ta" placeholder="20대 계획..." onblur="lifeData[${i}].d20=this.value;saveLife();">${r.d20||''}</textarea></td>
-      <td><textarea class="life-ta" placeholder="30대 계획..." onblur="lifeData[${i}].d30=this.value;saveLife();">${r.d30||''}</textarea></td>
-      <td><textarea class="life-ta" placeholder="40대+ 계획..." onblur="lifeData[${i}].d40=this.value;saveLife();">${r.d40||''}</textarea></td>
+      <td><textarea class="life-ta" placeholder="30대 성과..." onblur="lifeData[${i}].d20=this.value;saveLife();">${r.d20||''}</textarea></td>
+      <td><textarea class="life-ta" placeholder="40대 계획..." onblur="lifeData[${i}].d30=this.value;saveLife();">${r.d30||''}</textarea></td>
+      <td><textarea class="life-ta" placeholder="50대+ 계획..." onblur="lifeData[${i}].d40=this.value;saveLife();">${r.d40||''}</textarea></td>
     </tr>`).join('');
 }
 function addLifeRow(){lifeData.push({label:'새 영역',color:'#e8f0fe',tc:'#1558b0',d20:'',d30:'',d40:''});saveLife();renderLife();}
